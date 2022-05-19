@@ -16,4 +16,4 @@ with open(args.input, 'r') as f:
 
 with open(args.output, 'w') as f:
     for line in questions:
-        f.write(line)
+        f.write("{}\n".format(line))
