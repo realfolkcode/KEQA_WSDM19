@@ -373,5 +373,5 @@ for line in open(os.path.join(args.output, 'cleanedFB.txt'), 'r'):
 outfile = open(os.path.join(args.output, 'prediction.txt'), 'w')
 for i in range(len(learned_tail)):
     answer = ' '.join([str(item) for item in learned_tail[i]])
-    outfile.write("{}\n".format(answer))
+    outfile.write("{}\t{}\t{}\n".format(learned_head[i], learned_pred[i], answer))
 outfile.close()
